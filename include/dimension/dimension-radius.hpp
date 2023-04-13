@@ -1,6 +1,7 @@
 #ifndef DIMENSION_RADIUS_HPP__
 #define DIMENSION_RADIUS_HPP__
 
+#include <ostream>
 #include "dimension-millimeter.hpp"
 
 namespace dimension {
@@ -11,6 +12,12 @@ namespace dimension {
 
             explicit operator float() const     { return static_cast<float>(value_); }
             explicit operator double() const    { return static_cast<double>(value_); }
+
+            friend std::ostream&
+            operator<<(std::ostream& os, const radius& r) {
+                os << r.value_;
+                return os;
+            }
         private:
             millimeter value_;
     };
