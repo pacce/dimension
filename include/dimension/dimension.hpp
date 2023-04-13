@@ -3,4 +3,6 @@
 
 #include "dimension-millimeter.hpp"
 
+#include "dimension-radius.hpp"
+
 #endif // DIMENSION_HPP__
