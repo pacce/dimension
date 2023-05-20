@@ -14,4 +14,7 @@ dependencies  = [
   ]
 
 millimeter  = executable('millimeter', 'millimeter.cpp', dependencies: dependencies)
+radius      = executable('radius', 'radius.cpp', dependencies: dependencies)
+
 test('millimeter', millimeter)
+test(    'radius',     radius)

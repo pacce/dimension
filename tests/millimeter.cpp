@@ -2,17 +2,7 @@
 #include <rapidcheck/gtest.h>
 #include <dimension/dimension.hpp>
 
-namespace rc {
-    template <>
-    struct Arbitrary<dimension::millimeter> {
-        static Gen<dimension::millimeter>
-        arbitrary() {
-            return gen::construct<dimension::millimeter>(
-                    gen::inRange<std::uint16_t>(0, std::numeric_limits<std::uint16_t>::max())
-                    );
-        }
-    };
-} // namespace rc
+#include "arbitrary.hpp"
 
 using dimension::millimeter;
 
